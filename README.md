@@ -16,4 +16,3 @@ before you start create an account on firebase website and update the file fireb
 npm install
  ```
 npm start
- ```
