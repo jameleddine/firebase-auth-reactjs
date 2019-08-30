@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Authentification from './auth/googlesignin'
 import FormInscription from './auth/signup'
 import FormLogin from './auth/signin'
+import Forgot from './auth/forgotpassword'
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
             <li><Link to={'/'} className="nav-link"> Login </Link></li>
             <li><Link to={'/signup'} className="nav-link">Inscription</Link></li>
             <li><Link to={'/signingoogle'} className="nav-link">Login using Google</Link></li>
+            <li><Link to={'/forgot'} className="nav-link">Password Forgotten</Link></li>
           </ul>
           </nav>
           <hr />
@@ -24,6 +26,7 @@ class App extends React.Component {
               <Route exact path='/' component={FormLogin} />
               <Route path='/signup' component={FormInscription} />
               <Route path='/signingoogle' component={Authentification} />
+              <Route path='/forgot' component={Forgot} />
           </Switch>
         </div>
       </Router>
